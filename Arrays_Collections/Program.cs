@@ -2,9 +2,17 @@
 {
     internal class Program
     {
+       
         static int[] num = new int[10] { 2, 4, 7, 9, 12, 13, 15, 0, 0, 0 };
         static void Main(string[] args)
         {
+            int x1;
+            x1 = 10;
+            x1++;
+            const int y= 100;
+            //y++;
+
+
             string choice = "y";
             while (choice == "y")
             {

@@ -12,12 +12,17 @@ namespace Arrays_Collections
         static void Main()
         {
             // ArrayList allows you to perform insertion deletion anywhere
-            ArrayList list = new ArrayList();
+            ArrayList list = new ArrayList(capacity:10);
             // collection > dynamic in nature, memory is not wasted
             list.Add(1);
             list.Add(2);
             list.Add(3);
-            foreach (int item in list)
+            list.Add("aaaa");
+            list.Add(90.8f);  // boxing happens
+            
+            // boxing / unboxing happens
+            // boxing is used when value type is converted to ref type
+            foreach (var item in list) // unboxing happens here
             {
                 Console.WriteLine(item);
             }
@@ -84,7 +89,7 @@ namespace Arrays_Collections
             ht[100] = "New Delhi";
             ht[190] = "Calcutta";
             ht[1] = "Delhi";
-            ht["Ajay"] = "delhi";
+            ht["Ajay"] = 90;
             if (ht.ContainsKey(200))
             {
                 Console.WriteLine("found");
